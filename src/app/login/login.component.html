@@ -11,7 +11,7 @@
 		
 			<input class="email1 des" type="text" size="20" placeholder="Почта" maxlength="300"[(ngModel)]="mail">
 			
-			<input class="password3 des"  type="text" size="20"minlength="10" placeholder="Пароль" maxlength="300"[(ngModel)]="password">
+			<input class="password3 des"  type="password" size="20"minlength="10" placeholder="Пароль" maxlength="300"[(ngModel)]="password">
 			<div *ngIf="incorrectPassword" style="background-color: rgb(255, 255, 255); color: rgb(255, 0, 0); width: 170px;">Пароль неверный</div>
 			<div *ngIf="incorrectMail" style="background-color: rgb(255, 255, 255); color: rgb(255, 0, 0); width: 170px;"> Неверная почта</div>
 

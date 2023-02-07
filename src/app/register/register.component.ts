@@ -7,6 +7,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
+  
 })
 export class RegisterComponent implements OnInit {
   name: string = '';
@@ -35,6 +36,7 @@ export class RegisterComponent implements OnInit {
       this.incorrectPassword = false;
       console.log('Password match');
     }
+    
 
     let user = {
       name: this.name,
@@ -45,8 +47,8 @@ export class RegisterComponent implements OnInit {
     };
 
     this.db.collection("Users").add(user)
-      .then(() => {
-        console.log("User added to Firestore successfully");
+      .then(docRef => {
+        console.log("User added to Firestore successfully", docRef.id);
       })
       .catch((error) => {
         console.error("Error adding user to Firestore: ", error);

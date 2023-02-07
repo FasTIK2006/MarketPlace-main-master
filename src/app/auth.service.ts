@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 @Injectable({
     providedIn: 'root'
   })
@@ -18,5 +17,8 @@ import { Injectable } from '@angular/core';
   
     isLoggedIn(): boolean {
       return localStorage.getItem(this.LOCAL_STORAGE_KEY) === 'true';
+      
+
     }
+    
   }
